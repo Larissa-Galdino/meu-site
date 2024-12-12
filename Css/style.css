@@ -1,0 +1,397 @@
+
+/* importacao da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* opcoes de cores */
+:root{
+    --main-color:#BD8BF2;
+    --text-color:#DBECF4;
+
+    --bg-color-01:#122E46;
+    --bg-color-02:#1A4568;
+    --bg-color-03:#5F84A1;
+    --bg-color-04:#90AFC4;
+    --bg-color-05:#B6D0E1;
+    --bg-color-05:#B6D0E1;
+    --bg-color-05:#CBDEED;
+    --color-00:#0000001a;
+    --color--01:#BD8BF2;
+    --color--02: #1b1a1a;
+    --color--03:#ffffff;
+}
+
+/* desativando padroes da pagina */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    border: none;
+    outline:none;
+    scroll-behavior: smooth;
+}
+
+/* formatando parte do html */
+html{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+/* formatando parte do corpo */
+
+body{
+    background-color: var(--bg-color-01);
+    color: var(--text-color);
+}
+
+/* formatando parte do cabeçalho */
+
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 1.1rem;
+    background-color: var(--bg-color-01);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border: solid 1px var(--color-00);
+}
+
+/* formatando parte do logo */
+.logo{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+/* formatando parte de navegaçao */
+.nav a{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    transition: 0.4;
+
+    border: solid 1px var(--bg-color-01);
+
+}
+
+.nav a:hover{
+    color: var(--main-color);
+}
+
+/* formatando parte das sessoes */
+section{
+    /* min-height:100vh; */
+    padding: 6rem 6rem 2rem;
+}
+
+span{
+    color: var(--main-color);
+}
+
+/* formatando parte das Bloco inicio */
+.inicio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.inicio-content{
+    width: 45%;
+}
+
+.inicio-img img{
+    width: 100%;
+    border-radius: 0.6rem;
+}
+
+.inicio-img{
+    border-right: solid 0.6rem var(--main-color);
+    border-bottom: solid 0.6rem var(--main-color);
+    border-radius: 0.8rem;
+}
+
+.inicio-content h1{
+    font-weight: 700;
+    line-height: 1.3;
+    font-size: 2.7rem;
+}
+
+.inicio-content h3{
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.inicio-content p{
+    font-size: 700;
+    margin-top: 1.0rem;
+    text-align: justify;
+}
+
+.sobre-mim h2,
+.formacao h2,
+.portfolio h2,
+.contato h2{
+    font-size:2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* formatando parte das Bloco Sobre mim */
+.sobre-mim-container{
+    display: grid;
+    gap:1.2rem;
+    flex-direction: row; /* Garante que os itens fiquem em linha */
+    justify-content: space-evenly; /* Espaça os itens uniformemente */
+}
+
+.sobre-mim-Box{
+    position: relative;
+    border-radius: 0.6;
+    box-shadow: 0 0 0.6rem var(--bg-color-03);
+    display: flex;
+}
+
+.sobre-mim-box img{
+    width: 100%;
+    border-radius: 0.6rem; /* Caso você queira bordas arredondadas nas imagens */
+
+}
+
+.sobre-mim-box {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sobre-mim-Box h3{
+    font-size: 1.5rem;
+}
+
+/* formatando parte das Bloco Fcrmação */
+.formacao-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.formacao-container .formacao-box{
+    padding: 3rem 3rem 3rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    background-color: var(--bg-color-01);
+}
+
+.formacao-box p{
+    margin: 0.2 0.5rem;
+    font-size: 1.1;
+    letter-spacing: 0.1rem;
+    display: inline-flex;
+}
+
+
+/* formatando parte das Bloco Portfolio */
+.portfolio-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+
+}
+
+.portfolio-box{
+    position: relative;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 0.6 var(--bg-color-02);
+    overflow: hidden;
+}
+
+.portfolio-box img{
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.portfolio-box img:hover{
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent,var(--main-color));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(30rem);
+    transition: 0.5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0)
+
+}
+
+.portfolio-layer h4{
+    font-size: 1.8rem;
+    color: #1A4568;
+}
+
+.portfolio-layer p{
+    margin: 0.2rem 0 0.5;
+    color: #1A4568;
+    
+}
+
+.portfolio-layer a i{
+    font-size: 1.1rem;
+    color: #1A4568;
+
+}
+
+.portfolio-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:3rem;
+    height:3rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+/* formatando parte das Bloco Formulario */
+form{
+    max-width: 45rem;
+    margin: 0.6rem auto;
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+
+form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+form .input-box input,
+form textarea{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color:var(--bg-color-02);
+    border-radius: 0.5rem;
+    margin: 0.4rem 0;
+}
+
+form textarea{
+    resize: none;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: var(--bg-color-01);
+}
+
+/* formatando parte das Bloco  Midia */
+.social-midia img{
+    width: 3.5rem;
+    
+}
+
+.social-midia a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height:2.5rem;
+    background:transparent;
+    border: solid 0.15rem var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 1.8rem 0.5rem;
+    transition:  0.5s ease;
+}
+
+/* formatando parte das Bloco botoes */
+
+.btn{
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    background-color:var(--main-color);
+    border-radius: 0.5rem;
+    color: var(--bg-color-02);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.3s ease;
+    margin: 1.2rem;
+}
+
+.btn:hover{
+    box-shadow: 0 0 0.3rem;
+    background-color: inherit;
+    color: var(--bg-color-02);
+    cursor: pointer;
+}
+
+@media (min-width:1200px) {
+
+
+    .inicio {
+        flex-direction: row;
+    }
+
+    .inicio-img{
+        max-width: 25%;
+    }
+
+    .inicio-content {
+        max-width: 50%;
+    }
+    .inicio-content H1{
+        max-width: 50%;
+    }
+
+    .inicio-content H3{
+        max-width: 50%;
+    }
+
+    .inicio-img{
+        max-width: 20%;
+    }
+
+    .sobre-mim-container {
+        grid-template-columns: auto auto auto;
+        max-width: 100%;
+    }
+
+    .formacao-container .formacao-box{
+        flex-direction: row;
+        grid-template-columns: auto;
+        max-width: 80%;
+        gap:1.2rem;
+    }
+
+}
+
+
+
